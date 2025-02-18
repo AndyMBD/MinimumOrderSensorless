@@ -83,9 +83,13 @@ cjh_color = cyclic_generator(cjh_colors)
 
 
 # 读取数据
-if not os.path.exists('./acmsimcv5/dat'):
-    os.makedirs('./acmsimcv5/dat')
-data_file_name = r"./acmsimcv5/dat/IM_Marino05_IFE_Comparison-225-1000-4-5019.dat"
+# if not os.path.exists('./acmsimcv5/dat'):
+#     os.makedirs('./acmsimcv5/dat')
+# data_file_name = r"./acmsimcv5/dat/IM_Marino05_IFE_Comparison-225-1000-4-5019.dat"
+
+# if not os.path.exists('./acmsimcv5/dat'):
+#     os.makedirs('./acmsimcv5/dat')
+data_file_name = r"./build/IM_Marino05_IFE_Comparison-225-1000-4-5019.dat"
 df_profiles = pd.read_csv(data_file_name, na_values = ['1.#QNAN', '-1#INF00', '-1#IND00'])
 no_samples = df_profiles.shape[0]
 no_traces  = df_profiles.shape[1]
